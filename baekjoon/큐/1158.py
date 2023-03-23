@@ -7,12 +7,12 @@ ans = []
 
 for _ in range(n):
   for _ in range(k-1):
-    cur1 = a.popleft()
-    a.append(cur1)
-  cur2 = a.popleft()
-  ans.append(cur2)
+    t = a.popleft()
+    a.append(t)
+  j = a.popleft()
+  ans.append(j)
 
-print('<',end='')
+print('<',end='')   
 for x in ans:
   if x == ans[-1]:
     print(x,end='')

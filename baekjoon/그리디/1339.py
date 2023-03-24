@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline())
 alphabet= [0 for _ in range(26)]
 

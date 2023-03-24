@@ -1,6 +1,5 @@
 import sys
 n = int(sys.stdin.readline())
-
 plus = [] # 양수 배열
 minus = [] # 음수 배열
 ans = 0 # 결과값 변수

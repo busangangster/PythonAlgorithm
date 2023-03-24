@@ -1,6 +1,5 @@
 n = int(input())
 cnt = 0
-
 start = n # 새로운 수를 만들기 위해 시작하는 값
 
 while True:

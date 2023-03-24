@@ -12,6 +12,7 @@ for _ in range(n):
   j = a.popleft()
   ans.append(j)
 
+
 print('<',end='')   
 for x in ans:
   if x == ans[-1]:

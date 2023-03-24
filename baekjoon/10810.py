@@ -1,5 +1,4 @@
 import sys
-
 n,m = map(int,sys.stdin.readline().split())
 ans = [0] * (n+1)
 

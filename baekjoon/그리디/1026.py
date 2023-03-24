@@ -10,4 +10,5 @@ for _ in range(n):
   a.remove(max(a))
   b.remove(min(b))
 
+
 print(s)

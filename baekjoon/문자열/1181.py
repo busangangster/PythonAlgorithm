@@ -1,5 +1,4 @@
 import sys
-
 n = int(sys.stdin.readline())
 a = []
 
@@ -14,4 +13,5 @@ a.sort(key = len) # 길이순으로 오름차순 정렬
 
 for x in a:
   print(x)
+
 

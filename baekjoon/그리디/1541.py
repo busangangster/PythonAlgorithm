@@ -17,3 +17,7 @@ for i in n[1:]:
     sum -= int(j)
 
 print(sum)
+
+
+
+

@@ -1,3 +1,13 @@
-a = [1,2,3,4,5]
 
-print(a[::-1])
+import sys
+
+a = int(sys.stdin.readline())
+
+score = list(map(int,sys.stdin.readline().split()))
+
+max_score = max(score)
+
+print(((sum(score)/max_score*100)) / len(score))
+
+
+

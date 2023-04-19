@@ -6,7 +6,7 @@ _list = []
 for i in range(1,246912):
   if i == 1:
     continue
-  for j in range(2,int(i**0.5)+1):
+  for j in range(2,int(i**0.5)+1):  # i%j가 소수면 리스트에 append
     if i%j == 0:
       break
   else:
@@ -17,7 +17,7 @@ while True:
   cnt = 0
   if n == 0:
     break
-  for i in _list:
+  for i in _list: # 리스트 안에 들어있는 소수 중, n보다 크고, 2n보다 작거나 같은 소수가 있으면 cnt += 1
     if n < i <= 2*n:
       cnt += 1
 

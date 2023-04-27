@@ -13,7 +13,7 @@ for _ in range(n):
   elif a in [4,9]:
     if b % 2 == 0: # b가 짝수일 때
       print(a*a%10)
-    else:
+    else: # b가 홀수일 때
       print(a)
   elif a in [2,3,7,8]:
     if b%4 == 0:

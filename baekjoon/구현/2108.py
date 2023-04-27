@@ -1,32 +1,27 @@
 import sys
+from collections import Counter 
 input = sys.stdin.readline
 
 n = int(input())
-nums = []
-tt = []
-gg = []
+a = []
+
 for _ in range(n):
-  nums.append(int(input()))
+  a.append(int(input()))
 
-nums.sort()
-print(round(sum(nums)/n))
-print(nums[len(nums)//2])
+a.sort()
 
-for i in nums:
-  tt.append(nums.count(i))
-  if nums.count(i) < max(tt):
-    tt.remove(nums.count(i))
-  
-for i in nums:
-  if i in gg:
-    continue
-  if max(tt) == nums.count(i):
-    gg.append(i)
+print(round(sum(a)/n)) # 산술평균 출력
+print(a[len(a)//2]) # 중앙값 출력
 
-if len(gg) == 1:
-  print(gg[0])
+cnt = Counter(a).most_common(2)
+
+
+if len(cnt) > 1: # 최빈값 출력
+  if cnt[0][1] == cnt[1][1]:
+    print(cnt[1][0])
+  else:
+    print(cnt[0][0])
 else:
-  print(gg[1])
+  print(cnt[0][0])
 
-
-print(nums[-1] - nums[0])
+print(abs(a[0] - a[-1])) # 범위 출력

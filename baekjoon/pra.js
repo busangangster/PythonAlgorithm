@@ -1,16 +1,14 @@
 
-// 변수 유효 범위(var, let, const)
 
-function a() {
-  if (true) {
-    var num = 123
-  }
-  console.log(num)
+// 익명 함수
+
+const sum = function (x,y) {
+  return x + y
 }
-a()
 
-
-
+const a = 3
+const b = 5
+console.log(sum(a,b))
 
 
 

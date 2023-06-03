@@ -1,3 +1,5 @@
+
+
 import sys
 input = sys.stdin.readline
 
@@ -15,3 +17,5 @@ if stack:
   print(''.join(stack))
 else:
   print('FRULA')
+
+  

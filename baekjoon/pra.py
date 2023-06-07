@@ -1,26 +1,27 @@
+
+
 import sys
 from collections import deque
 input = sys.stdin.readline
+dia = []
+w = []
 
-n = int(input())
-a = []
-for i in range(1,n+1):
-  a.append(i)
+n,k = map(int,input().split())
+for _ in range(n):
+  dia.append(list(map(int,input().split())))
+  
+for _ in range(k):
+  w.append(int(input()))
 
-dq = deque(a)
-k = []
+dia.sort(reverse = True)
+w.sort(reverse = True)
+dq  = deque(dia)
 
-for _ in range(n-1):
-  cur1 = dq.popleft()
-  cur2 = dq.popleft()
-  k.append(cur1)
-  dq.append(cur2)
+print(dq,w)
 
-for x in k:
-  print(x,end=' ')
+# for x in dq:
+#   if x[0] <= w[0]
 
-print(*dq)
-
-
+  
 
     

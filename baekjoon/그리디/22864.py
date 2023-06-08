@@ -1,5 +1,3 @@
-
-
 import sys
 input = sys.stdin.readline
 
@@ -22,5 +20,4 @@ else:
       ans += b
     clock += 1 # 시간은 1시간씩 증가
   print(ans)
-
 

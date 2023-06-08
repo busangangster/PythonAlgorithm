@@ -21,6 +21,4 @@ if cnt >= n:
   print(n)
 else:
   print(cnt)
-    
-# print(cnt)
 

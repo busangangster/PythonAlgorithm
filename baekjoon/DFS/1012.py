@@ -15,7 +15,6 @@ def DFS(x,y):
       arr[xx][yy] = -1  # 확인과정 
       DFS(xx,yy) 
 
-
 t = int(input())
 
 for _ in range(t):

@@ -1,5 +1,3 @@
-
-
 import sys
 input = sys.stdin.readline
 
@@ -29,6 +27,3 @@ for i in range(min(n,m)):
     price = p
 
 print(price,max)
-
-
-

@@ -1,2 +1,6 @@
-a = '000000'
-print(int(a))
+a = 'ab'
+aa = 'abc'
+
+b = ['a','b']
+
+print(a in aa)

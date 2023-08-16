@@ -6,7 +6,6 @@ n = int(input())
 arr = deque()
 stack = []
 
-
 for _ in range(n):
   a = list(map(str,input().split()))
 
@@ -16,7 +15,6 @@ for _ in range(n):
   elif a[0] == '2':
     stack.append([a[1],2])
     arr.appendleft(a[1])
-
   else:
     if stack:
       if stack[-1][1] == 1:
@@ -25,8 +23,6 @@ for _ in range(n):
       elif stack[-1][1] == 2:
         arr.popleft()
         stack.pop()
-    else:
-      continue
 
 if arr:
   print(''.join(arr))

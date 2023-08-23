@@ -3,31 +3,33 @@ import sys
 import heapq as hq
 input = sys.stdin.readline
 
-n,h,t = map(int,input().split())
-arr = []
-cnt = 0
-for _ in range(n): # 최대힙으로 만들기 위해 음수로 append 
-  arr.append(-int(input()))
+t = int(input())
 
-hq.heapify(arr)
+for _ in range(t):
+  max_arr = [] # 최대힙
+  min_arr = [] # 최소힙 
+  k = int(input())
+  for _ in range(k):
+    a,b = map(str,input().split())
+    
+    if not max_arr and min_arr and a == 'D':
+      continue
+    else:
 
-while arr and cnt != t:
-  if -arr[0] >= h: # 거인들의 키가 더 크거나 같을 때
-    if -arr[0] == 1: # 최대힙인데 1이 나오면 while문 바로 종료
-      break
-    else: # 거인의 키를 1/2로 줄여나가고, cnt를 1씩 증가 
-      hq.heappush(arr,int((hq.heappop(arr)/2)))
-      cnt += 1
+      if a == 'I':
+        hq.heappush(max_arr,-int(b))
+        hq.heappush(min_arr,int(b))
+
+      elif a == 'D' and b == '1':
+        hq.heappop(max_arr)
+      
+      elif a == 'D' and b == '-1':
+        hq.heappop(min_arr)
+    print(max_arr)
+    print(min_arr)
+
+  if max_arr and min_arr:
+    print(-max_arr[0],min_arr[0])
   else:
-    break
-
-if all(h > -x for x in arr): # while문이 끝났을 때 arr안의 모든 원소가 h보다 작으면 yes
-  print('YES')
-  print(cnt)
-  
-else: # 아니면 NO 
-  print('NO')
-  print(-arr[0])
-
-
+    print('EMPTY')
 

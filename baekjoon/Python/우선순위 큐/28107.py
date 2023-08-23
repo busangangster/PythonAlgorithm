@@ -1,29 +1,25 @@
-
-# 시간초과 
 import sys
 import heapq as hq
-from collections import deque
 input = sys.stdin.readline
 
 n,m = map(int,input().split())
 arr = []
+orders = [[] for _ in range(200001)]
 people = [0] * n
+
 for _ in range(n):
   a = list(map(int,input().split()))
   arr.append(a[1:])
 
+for i in range(n):
+  for j in arr[i]:
+    hq.heappush(orders[j],i)
+
 b = list(map(int,input().split()))
-b = deque(b)
 
-while b:
-  for i in range(n):
-    if b[0] in arr[i]:
-      people[i] += 1 
-      b.popleft()
-      break
-  else:
-    b.popleft()
-
+for i in b:
+  if orders[i]:
+    people[hq.heappop(orders[i])] += 1
+  
 print(*people)
-
 

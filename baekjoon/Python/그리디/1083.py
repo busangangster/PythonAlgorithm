@@ -6,19 +6,16 @@ a = list(map(int,input().split()))
 s = int(input())
 
 for i in range(n):
-  cur = a[i]
-  t = 0
-  if s == 0:
+  mx = max(a[i:min(n, i+s+1)])
+  idx = a.index(mx)
+
+  for j in range(idx,i,-1):
+    a[j],a[j-1] = a[j-1],a[j]
+
+  s -= (idx - i)
+  if s <= 0:
     break
-  else:
-    for j in range(i,n):
-      if a[j] > cur:
-        cur = a[j]
-        t += 1
-        
-
-    
-      
+  
+print(*a)
 
         
-

@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 n,m = map(int,input().split())
 arr = []
-orders = [[] for _ in range(100)]
+orders = [[] for _ in range(200001)]
 people = [0] * n
 
 for _ in range(n):
@@ -25,4 +25,8 @@ for i in b:
   print(people)
   
 print(*people)
+
+
+
+
 

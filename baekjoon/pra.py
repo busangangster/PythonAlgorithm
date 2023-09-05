@@ -1,15 +1,21 @@
 import sys
 input = sys.stdin.readline
 
-a,b = map(int,input().split())
+a = list(input().strip())
+stack = []
+ans = 0
+cnt = 0
 
-def GCD(n,m):
-  while m != 0:
-    r = n%m
-    n = m
-    m = r
-  return n
+for i in a:
+  if i == '(' or '[':
+    stack.append(i)
+  else:
+    if i == ')':
+      while stack[-1] != '(':
+        stack.pop()
+    elif i == ']':
+      while stack[-1] != '[':
+        stack.pop()
+      cnt += 1
 
-print(GCD(b,a))
-print(a*b//GCD(b,a))
 

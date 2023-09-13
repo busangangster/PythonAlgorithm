@@ -27,4 +27,3 @@ for i in range(h):
 
 for x in check:
   print(*x)
-

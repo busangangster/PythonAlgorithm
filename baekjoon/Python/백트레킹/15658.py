@@ -19,8 +19,9 @@ def DFS(depth,total,plus,minus,multiply,divide):
       DFS(depth+1,total-a[depth],plus,minus-1,multiply,divide)
     if multiply:
       DFS(depth+1,total*a[depth],plus,minus,multiply-1,divide)
+
     if divide:
-      if total < 0:
+      if total <0:
         DFS(depth+1,(-total//a[depth])*-1,plus,minus,multiply,divide-1)
       else:
         DFS(depth+1,total//a[depth],plus,minus,multiply,divide-1)

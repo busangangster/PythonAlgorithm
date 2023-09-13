@@ -1,21 +1,20 @@
 import sys
 input = sys.stdin.readline
 
-arr = []
-d = []
+tall = []
 for _ in range(9):
-  arr.append(int(input()))
+  tall.append(int(input()))
 
-for i in range(len(arr))[:]:
-  for j in range(i+1,len(arr))[:]:
-    if sum(arr) - (arr[i]+arr[j]) == 100:
-      tmp1 = arr[i]
-      tmp2 = arr[j]
+for i in range(9):
+  for j in range(i+1,9):
+    if sum(tall) - (tall[i] + tall[j]) == 100:
+      ans1 = tall[i]
+      ans2 = tall[j]
+      break
 
-arr.remove(tmp1)
-arr.remove(tmp2)
+tall.remove(ans1)
+tall.remove(ans2)
+tall.sort()
 
-
-arr.sort()
-for i in arr:
-  print(i)
+for x in tall:
+  print(x)

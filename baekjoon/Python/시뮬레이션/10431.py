@@ -13,8 +13,3 @@ for i in range(1,t+1):
         cnt += 1
 
   print(a[0],cnt)
-
-
-      
-
-

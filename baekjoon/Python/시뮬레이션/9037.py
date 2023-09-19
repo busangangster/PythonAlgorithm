@@ -25,8 +25,3 @@ for _ in range(t):
           a[i+1] = a[i+1] + k[i]
       cnt += 1
   print(cnt)
-
-          
-
-
-

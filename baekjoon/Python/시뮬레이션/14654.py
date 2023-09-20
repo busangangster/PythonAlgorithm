@@ -34,8 +34,9 @@ for i in range(n):
     else:
       cnt_a += 1
       cnt_b = 0
-  # print(cnt_a,cnt_b)
+  print(cnt_a,cnt_b)
+  # print(ans)
   
-  ans = max([ans,cnt_a,cnt_b])
+  ans = max(ans,cnt_a,cnt_b)
 
 print(ans)

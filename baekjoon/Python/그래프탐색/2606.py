@@ -8,7 +8,6 @@ cnt = 0
 
 for _ in range(k):
   a,b = map(int,sys.stdin.readline().split())
-  # 각각의 컴퓨터를 서로 연결 시킴
   graph[a] += [b]
   graph[b] += [a]
 
@@ -22,3 +21,38 @@ def DFS(x):
 
 DFS(1)
 print(cnt)
+
+# bfs
+# import sys
+# from collections import deque
+# input = sys.stdin.readline
+
+# n = int(input())
+# k = int(input())
+# graph = [[] for _ in range(n+1)]
+# cnt = 0
+
+# for _ in range(k):
+#   a,b = map(int,input().split())
+#   graph[a].append(b)
+#   graph[b].append(a)
+
+
+# def BFS(graph,v,visited):
+#   global cnt
+#   visited[v] = True
+#   dq = deque()
+#   dq.append(v)
+
+#   while dq:
+#     f = dq.popleft()
+
+#     for i in graph[f]:
+#       if not visited[i]:
+#         visited[i] = True
+#         dq.append(i)
+#     cnt += 1
+#   return cnt-1
+
+# visited = [False] * (n+1)
+# print(BFS(graph,1,visited))

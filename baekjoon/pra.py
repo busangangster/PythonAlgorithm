@@ -1,37 +1,17 @@
 import sys
-from collections import deque
 input = sys.stdin.readline
 
-n,m = map(int,input().split())
-graph = [[] for _ in range(n+1)]
+n,x,k = map(int,input().split())
+b = [0] * (n+1)
+b[x] = 1
 
-for _ in range(m):
-  a,b = map(int,input().split())
-  graph[a].append(b)
-  graph[b].append(a)
+print(b)
 
-def BFS(start): # 간선 확인
-  visited[start] = True
-  dq = deque()
-  dq.append(start)
+for _ in range(k):
+  x,y = map(int,input().split())
+  b[x],b[y] = b[y],b[x]
 
-  while dq:
-    v = dq.popleft()
-    for i in graph[v]:
-      if not visited[i]:
-        visited[i] = True
-        dq.append(i)
 
-visited = [False] * (n+1)
-cnt = 0
-
-for i in range(1,n+1): # 연결선 확인
-  if not visited[i]:
-    if not graph[i]:
-      cnt += 1
-      visited[i] = True
-    else:
-      BFS(i)
-      cnt += 1
-
-print(cnt)
+for x in range(len(b)):
+  if b[x] == 1:
+    print(x)

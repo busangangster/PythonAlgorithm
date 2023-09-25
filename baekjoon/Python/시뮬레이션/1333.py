@@ -15,8 +15,3 @@ for i in range(0,total,d):
     break
 else:
   print(i+d)
-
-
-  
-
-

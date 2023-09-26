@@ -4,17 +4,14 @@ input = sys.stdin.readline
 
 m,n = map(int,input().split())
 graph = [list(map(int,input().split())) for _ in range(n)]
+ans = 0
 nx = [-1,0,1,0]
 ny = [0,1,0,-1]
-dq = deque()
-ans = 0
 
-for i in range(n):
-  for j in range(m):
-    if graph[i][j] == 1:
-      dq.append([i,j])
+def BFS(i,j):
+  dq = deque()
+  dq.append([i,j])
 
-def BFS():
   while dq:
     x,y = dq.popleft()
 
@@ -25,7 +22,12 @@ def BFS():
       if (0 <= xx < n) and (0 <= yy < m) and graph[xx][yy] == 0:
         graph[xx][yy] = graph[x][y] + 1
         dq.append([xx,yy])
-BFS()
+
+for i in range(n):
+  for j in range(m):
+    if graph[i][j] == 1:
+      BFS(i,j)
+
 for i in graph:
   if i.count(0) >= 1:
     print(-1)

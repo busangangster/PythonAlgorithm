@@ -21,6 +21,7 @@ def BFS(v):
   else:
     print('use the stairs')
   
+
 f,s,g,u,d = map(int,input().split())
-visited = [0 for _ in range(30)]
+visited = [0 for _ in range(1000001)]
 BFS(s)

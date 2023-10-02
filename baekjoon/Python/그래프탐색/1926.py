@@ -1,3 +1,4 @@
+
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -21,7 +22,6 @@ def BFS(a,b):
         graph[xx][yy] = 0
         dq.append([xx,yy])
         count += 1
-
   result.append(count)
 
 n,m = map(int,input().split())
@@ -41,3 +41,8 @@ if result == []:
 else:
   print(cnt)
   print(max(result))
+
+
+
+
+  

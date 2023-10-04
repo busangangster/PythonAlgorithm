@@ -1,4 +1,3 @@
-
 import sys
 input = sys.stdin.readline
 from collections import deque
@@ -42,7 +41,3 @@ for i in range(n):
       BFS(i,j)
 
 print(ans)
-
-
-
-

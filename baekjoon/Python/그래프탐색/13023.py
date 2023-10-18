@@ -27,6 +27,6 @@ def DFS(v):
 
 for i in range(n):
   visited = [False] * (n)
-  DFS(i,0)
+  DFS(i)
 
 print(0)

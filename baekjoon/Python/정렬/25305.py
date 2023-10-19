@@ -1,9 +1,8 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
+n,k = map(int,input().split())
 a = list(map(int,input().split()))
-ans = [0] * n
 
-for i in range(n):
-  
+a.sort(reverse= True)
+print(a[k-1])

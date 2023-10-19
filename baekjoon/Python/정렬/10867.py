@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 n = int(input())
 a = list(map(int,input().split()))
-ans = [0] * n
-
-for i in range(n):
-  
+a = set(a)
+b = list(a)
+b.sort()
+print(*b)

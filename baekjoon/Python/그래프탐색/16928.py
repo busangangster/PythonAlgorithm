@@ -1,5 +1,3 @@
-
-
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -36,5 +34,3 @@ for _ in range(n+m): # 사다리 + 뱀으로 이동할 수 있는 경우를 ladd
 
 visited = [False] * (101)
 BFS(1)
-
-

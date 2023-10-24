@@ -12,7 +12,7 @@ def binary(x):
     if x > b[mid]:
       res = mid
       left = mid + 1
-    elif x <= b[mid]:
+    else:
       right = mid - 1
 
   return res + 1

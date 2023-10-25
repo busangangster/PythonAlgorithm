@@ -8,7 +8,7 @@ ny = [0,1,0,-1]
 def BFS(a,b,c):
   dq = deque()
   dq.append([a,b,c])
-  visited[a][b][0] = 1
+  visited[a][b][c] = 1
 
   while dq:
     x,y,z = dq.popleft()

@@ -26,9 +26,9 @@ def BFS(a,b,c):
           dq.append([xx,yy,z])
         elif graph[xx][yy] == 1 and z == 0:
           visited[xx][yy][1] = visited[x][y][0] + 1
-          dq.append([xx,yy,z+1])
+          dq.append([xx,yy,1])
 
-  return - 1
+  return -1
 
 n,m = map(int,input().split())
 graph = [list(map(int,input().strip())) for _ in range(n)]

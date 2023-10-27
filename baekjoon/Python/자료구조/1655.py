@@ -3,23 +3,20 @@ import heapq as hq
 input = sys.stdin.readline
 
 n = int(input())
-lt_heap = []
-rt_heap = []
+left = [] # 최대힙
+right = [] # 최소힙 
 
 for _ in range(n):
   a = int(input())
-  
-  if len(lt_heap) == len(rt_heap):
-    hq.heappush(lt_heap,-a)
+
+  if len(left) == len(right):
+    hq.heappush(left,-a) # 최대힙으로 만들기 위해 '-'부호로 push
   else:
-    hq.heappush(rt_heap,a)
+    hq.heappush(right,a) # 최소힙
   
-  if rt_heap and -lt_heap[0] > rt_heap[0]:
-    lt = -hq.heappop(lt_heap)
-    rt = hq.heappop(rt_heap)
+  if right and -left[0] > right[0]: # 최대힙의 가장 작은 수가 최소힙의 가장 작은 수보다 크면
+    hq.heappush(right,-hq.heappop(left)) # 둘이 교환
+    hq.heappush(left,-hq.heappop(right))
 
-    hq.heappush(lt_heap,-rt)
-    hq.heappush(rt_heap,lt)
+  print(-left[0]) # 최대힙의 첫번째 요소를 출력 
 
-  print(-lt_heap[0])
-  

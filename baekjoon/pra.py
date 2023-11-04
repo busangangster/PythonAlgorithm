@@ -1,23 +1,34 @@
 import sys
 input = sys.stdin.readline
 
+n = int(input())
+a = input().strip()
+cnt = 0
 dic = {}
-dic2 = {}
-for _ in range(3):
-  a,b = map(int,input().split())
-  if a in dic:
-    dic[a] += 1
+for i in a:
+  if i in dic:
+    dic[i] += 1
   else:
-    dic[a] = 1
-  
-  if b in dic2:
-    dic2[b] += 1
-  else:
-    dic2[b] = 1
+    dic[i] = 1
 
-for x,y in dic.items():
-  if y == 1:
-    print(x,end=' ')
-for x,y in dic2.items():
-  if y == 1:
-    print(x)
+print(dic)
+    
+for _ in range(n-1):
+  t = input().strip()
+
+  if len(t) > len(a):
+    if len(t)-len(a) > 1:
+      continue
+  if len(a) > len(t):
+    if len(a)-len(t) > 1:
+      continue
+  
+  for i in t:
+    if i in dic:
+      dic[i] += 1
+    else:
+      dic[i] = 1
+  
+  for k,v in dic.items():
+    if v 
+  

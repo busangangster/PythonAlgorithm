@@ -48,5 +48,4 @@ for i in range(2,n+1):
     else:
       a.appendleft('B')
     b += 1
-  print(a)
 print(b,s)

@@ -12,12 +12,15 @@ for i in range(m):
      c += graph[j][i]
   clap.append(c)
 
+print(clap)
+
 # 슬라이딩 윈도우
 window = sum(clap[:a])
 max_v = window
 
 for i in range(a,len(clap)):
    window += clap[i] - clap[i-a]
+   print(window)
    if window > max_v:
       max_v = window
 

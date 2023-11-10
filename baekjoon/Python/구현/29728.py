@@ -3,49 +3,41 @@ from collections import deque
 input = sys.stdin.readline
 
 n = int(input())
-arr = [True for _ in range(n+1)]
-a = deque('B')
-prime = []
-s = 0
-b = 1
+arr = [True for _ in range(n+1)] # 다 소수로 초기화
 flag = True
-for i in range(2,int(n**0.5)+1):
+ans = deque('B') # n이 1인경우에는 소수가 아니기 때문에 미리 넣어두고 시작
+b = 1
+s = 0
+
+for i in range(2,int(n**0.5)+1): # 소수 찾아내기, 에라토스테네스 체
   if arr[i] == True:
     j = 2
-    while i*j <= n:
-      arr[i*j] = False
+    while i * j <= n:
+      arr[i*j] = False # 해당 수의 배수는 전부 소수가 아님 
       j += 1
 
-for i in range(2,n+1):
-  if arr[i]:
+for i in range(2,n+1): # 2부터 시작
+  if arr[i]: # 소수인 경우 
     if flag == True:
-      if a[-1] == 'B':
-        a.pop()
-        b -= 1
+      if ans[-1] == 'B':
+        ans.pop()
         for _ in range(2):
-          a.append('S')
-        s += 2
+          ans.append('S')
       else:
-        a.append('S')
-        s += 1
+        ans.append('S')
         flag = False
-
     else:
-      if a[0] == 'B':
-        a.popleft()
-        b -= 1
+      if ans[0] == 'B':
+        ans.popleft()
         for _ in range(2):
-          a.appendleft('S')
-        s += 2
+          ans.appendleft('S')
       else:
-        a.appendleft('S')
-        s += 1
+        ans.appendleft('S')
         flag = True
-
-  else:
-    if flag == 1:
-      a.append('B')
+  else: # 소수 아닐 때
+    if flag == True:
+      ans.append('B')
     else:
-      a.appendleft('B')
-    b += 1
-print(b,s)
+      ans.appendleft('B')
+
+print(ans.count('B'),ans.count('S'))

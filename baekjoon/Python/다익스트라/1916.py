@@ -25,9 +25,8 @@ min_dis = [int(1e9)] * (n+1)
 for _ in range(m):
   a,b,c = map(int,input().split())
   graph[a].append([b,c])
-  # graph[b].append([a,c])
+
 x,y = map(int,input().split())
 
 dijkstra(x)
 print(min_dis[y])
-

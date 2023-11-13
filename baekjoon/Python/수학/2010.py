@@ -13,6 +13,4 @@ if max(m) == 1:
 else:
   ans += sum(m[:-1])
   ans += m[-1] - (n-1)
-
   print(ans)
-  

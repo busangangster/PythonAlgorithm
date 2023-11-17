@@ -36,6 +36,7 @@ for _ in range(t):
   num = 0
   friends = [0] + list(map(int,input().split()))
   ans = [[] for _ in range(n+1)]
+  # 각각의 친구가 있는 방에서부터 1 ~ n번까지의 모든 거리를 구해줌 
   for i in range(1,k+1):
     t = dijkstra(friends[i])
     for j in range(1,n+1):
@@ -46,4 +47,5 @@ for _ in range(t):
     if plus < result:
       result = plus
       num = idx
+
   print(num+1)

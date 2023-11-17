@@ -1,0 +1,5 @@
+t = set()
+t.add(1)
+t.add(2)
+t.add(3)
+print(t == {1,2,3})

@@ -9,11 +9,14 @@ def fac(n):
   else:
     return n * fac(n-1)
 
-factorial = str(fac(t))
-cnt = 0
-for i in range(len(factorial)-1,-1,-1):
-  if factorial[i] != '0':
-    print(cnt)
-    break
-  else:
-    cnt += 1
+if t == 0:
+  print(0)
+else:
+  factorial = str(fac(t))
+  cnt = 0
+  for i in range(len(factorial)-1,-1,-1):
+    if factorial[i] != '0':
+      print(cnt)
+      break
+    else:
+      cnt += 1

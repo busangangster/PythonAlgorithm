@@ -17,4 +17,3 @@ for i in range(len(factorial)-1,-1,-1):
     break
   else:
     cnt += 1
-  

@@ -1,3 +1,4 @@
+
 import sys
 import heapq as hq
 input = sys.stdin.readline
@@ -21,7 +22,7 @@ def dijkstra(start):
         min_dis[next_node] = distance
         hq.heappush(q,[distance,next_node])
   
-  for i in range(1,n+1):
+  for i in range(1,n+1): # 예은이가 수색할 수 있는 범위 내의 모든 아이템의 개수를 구해줌
     if min_dis[i] <= m:
       item += items[i]
   
@@ -39,3 +40,4 @@ for _ in range(r):
 for i in range(1,n+1):
   ans = max(ans,dijkstra(i))
 print(ans)
+

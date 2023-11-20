@@ -1,7 +1,6 @@
 t = int(input())
 
 # def GCD(x,y):
-#   for i in range
 #   while y != 0:
 #     s = x % 
 #     x = y
@@ -16,8 +15,3 @@ for t_case in range(1,t+1):
     print('#{} {}'.format(t_case,a))
   else:
     print('#{} {}'.format(t_case,1))
-
-    
-  
-
-

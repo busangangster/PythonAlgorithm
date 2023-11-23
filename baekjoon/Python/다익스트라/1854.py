@@ -31,7 +31,9 @@ for x in min_dis:
   x.sort()
 
 for i in range(1,len(min_dis)):
-  if min_dis[i][k-1] == float('inf'):
+  if len(min_dis[i]) < k:
+    print(-1)
+  elif min_dis[i][k-1] == float('inf'):
     print(-1)
   else:
     print(min_dis[i][k-1])

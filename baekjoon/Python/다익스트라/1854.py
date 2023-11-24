@@ -19,7 +19,6 @@ def dijkstra(start):
 
 n,m,k = map(int,input().split())
 graph = [[] for _ in range(n+1)]
-t = [[] for _ in range(n+1)]
 min_dis = [[float('inf')]*(k+1) for _ in range(n+1)]
 for _ in range(m):
   a,b,c = map(int,input().split())
@@ -27,13 +26,8 @@ for _ in range(m):
 
 dijkstra(1)
 
-for x in min_dis:
-  x.sort()
-
-for i in range(1,len(min_dis)):
-  if len(min_dis[i]) < k:
-    print(-1)
-  elif min_dis[i][k-1] == float('inf'):
+for i in range(1,n+1):
+  if min_dis[i][k-1] == float('inf'):
     print(-1)
   else:
     print(min_dis[i][k-1])

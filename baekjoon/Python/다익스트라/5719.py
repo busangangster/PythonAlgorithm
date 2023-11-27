@@ -55,6 +55,8 @@ while True:
   min_dis = dijkstra()
   BFS()
   min_dis = dijkstra()
+  print(min_dis)
+  
   if min_dis[d] == float('inf'):
     print(-1)
   else:

@@ -22,4 +22,4 @@ for tc in range(1,t+1):
   ans = 0
   row = [0] * n
   check(0)
-  print(ans)
+  print('#{} {}'.format(tc,ans))

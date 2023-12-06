@@ -16,5 +16,3 @@ for tc in range(1,t+1):
     hh = 13 - dic['H']
     cc = 13 - dic['C']
     print('#{} {} {} {} {}'.format(tc,ss,dd,hh,cc))
-  
-  

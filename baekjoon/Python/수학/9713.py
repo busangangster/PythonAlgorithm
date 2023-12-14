@@ -9,4 +9,3 @@ for _ in range(t):
     if i % 2 != 0:
       ans += i
   print(ans)
-

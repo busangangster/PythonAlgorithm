@@ -6,9 +6,9 @@ b = int(input())
 
 if a == 2 and b == 18:
   print('Special')
-elif a <= 2:
+elif a ==1:
   print('Before')
-elif a <= 2 and b <= 18:
+elif a in [1,2] and b <= 18:
   print('Before')
 else:
   print('After')

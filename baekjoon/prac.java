@@ -1,16 +1,26 @@
 package baekjoon;
 import java.util.Scanner;
 
-class Main {
+class Main{
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
-    int m = sc.nextInt();
-
-    if ((n*100) >= m) {
-      System.out.println("Yes");
-    } else {
-      System.out.println("No");
+    int t = sc.nextInt();
+    for (int tc=0;tc<t;tc++) {
+      int n = sc.nextInt();
+      int[] score = new int[101];
+      for (int i=0;i<1000;i++) {
+        int k = sc.nextInt();
+        score[k]++;
+      }
+      int max_v = 0;
+      int ans = 0;
+      for (int i=0;i<score.length;i++) {
+        if (score[i] > max_v) {
+          max_v = score[i];
+          ans = i;
+        }
+      }
+      System.out.println("#"+tc+" "+ans);
     }
     sc.close();
   }

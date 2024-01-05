@@ -15,12 +15,12 @@ class Main{
       int max_v = 0;
       int ans = 0;
       for (int i=0;i<score.length;i++) {
-        if (score[i] > max_v) {
+        if (score[i] >= max_v) {
           max_v = score[i];
           ans = i;
         }
       }
-      System.out.println("#"+tc+" "+ans);
+      System.out.println("#"+(tc+1)+" "+ans);
     }
     sc.close();
   }

@@ -1,13 +1,20 @@
 t = int(input())
 for tc in range(1,t+1):
-    n = int(input())
-    dic = {}
-    arr = list(map(int,input().split()))
-    for x in arr:
-        if x in dic:
-            dic[x] += 1
-        else:
-            dic[x] = 1
-    result = sorted(dic.items(),key = lambda x:(x[1],x[0]),reverse=True)
-    print("#{} {}".format(n,result[0][0]))
-      
+  n,m = map(int,input().split())
+  a = list(map(int,input().split()))
+  b = list(map(int,input().split()))
+  ans = -2147000000
+  if len(b) >= len(a):
+    for i in range(len(b)-len(a)+1):
+      tmp = 0
+      for j in range(len(a)):
+        tmp += a[j]*b[i+j]
+      ans = max(tmp,ans)
+  else:
+    for i in range(len(a)-len(b)+1):
+      tmp = 0
+      for j in range(len(b)):
+        tmp += b[j]*a[i+j]
+      ans = max(tmp,ans)
+
+  print('#{} {}'.format(tc, ans))

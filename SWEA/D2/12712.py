@@ -31,7 +31,4 @@ for tc in range(1,t+1):
           if 0 <= xx < n and 0 <= yy <n:
             ans += arr[xx][yy]
       result.append(ans)
-  # print(result)
   print('#{} {}'.format(tc,max(result)))
-  
-          

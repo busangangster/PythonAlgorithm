@@ -19,5 +19,4 @@ class P15873 {
     }
     System.out.println(ans);
   }
-  
 }

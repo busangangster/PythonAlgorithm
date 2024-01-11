@@ -1,5 +1,4 @@
 package baekjoon.Java;
-import java.util.*;
 import java.io.*;
 
 class P1568 {
@@ -20,8 +19,6 @@ class P1568 {
         ans += 1;
       }
     }
-
     System.out.println(ans);
-  
   }
 }

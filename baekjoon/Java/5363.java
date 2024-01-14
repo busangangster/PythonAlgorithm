@@ -1,5 +1,4 @@
 package  baekjoon.Java;
-import java.util.*;
 import java.io.*;
 
 class P5363 {
